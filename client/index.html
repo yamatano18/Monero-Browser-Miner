@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Monero JS Miner</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="clientstyle.css">
+</head>
+
+<body>
+    <div class="miner-outerbox text-center">
+
+        <div class="big-text">
+            Monero JavaScript Miner
+        </div>
+        <div>
+            <textarea id="logger"></textarea>
+        </div>
+
+        <input id="minerName" class="input-field" type="text" placeholder="Miner Name">
+
+        <div class="group-div group-div-border">
+            <div class="big-text">Threads</div>
+            <div class="input-group input-number-group">
+                <div id="threads-decrement" class="input-group-button">
+                    <span class="input-number-decrement">-</span>
+                </div>
+                <input id="thread-number" class="input-field" type="number" value="4" min="-1" max="32">
+                <div id="threads-increment" class="input-group-button">
+                    <span class="input-number-increment">+</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-div group-div-border">
+            <div class="big-text">Power (%)</div>
+            <div class="input-group input-number-group">
+                <div id="power-decrement" class="input-group-button">
+                    <span class="input-number-decrement">-</span>
+                </div>
+                <input id="power-number" class="input-field" type="number" value="20" min="0" max="100">
+                <div id="power-increment" class="input-group-button">
+                    <span class="input-number-increment">+</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-div">
+            <button id="start-button"><span class="button-text">START</span></button>
+            <button id="stop-button"><span class="button-text">STOP</span></button>
+        </div>
+
+        <div class="group-div group-div-border">
+            <div>
+                <span id="hashTotal" class="big-text">0</span><span class="big-text"> H</span>
+            </div>
+            <div>
+                <span id="hashSpeed" class="big-text">0</span><span class="big-text"> H/s</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="actions.js"></script>
+    <!-- <script src="miner.js"></script> -->
+    <script src="https://xmr.omine.org/assets/v7.js"></script>
+    <script src="config.js"></script>
+</body>
+
+</html>

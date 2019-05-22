@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Monero JS Miner</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="serverstyle.css">
+    <link rel="stylesheet" type="text/css" href="loader.css">
+</head>
+
+<body>
+    <div class="text-center">
+
+        <div class="big-text">
+            Monero JavaScript Miner Statistics
+        </div>
+
+        <div id="data-loader">
+            Data refresh every 2 min<br>
+            Please wait for loading data...
+            <div class="loader elem-center">
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__ball"></div>
+            </div>
+        </div>
+        <div id="data-api-ready">
+            <div class="group-div group-div-border normal-text">
+                <span class="big-text">Network</span>
+                <div class="top-line">
+                    <div class="div-to-left-33">
+                        <h3>Height</h3>
+                        <span id="network-height"></span>
+                    </div>
+                    <div class="div-to-left-33">
+                        <h3>Difficulty</h4>
+                            <span id="network-difficulty"></span> G
+                    </div>
+                    <div class="div-to-left-33">
+                        <h3>Reward</h4>
+                            <span id="network-reward"></span> XMR
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-div group-div-border normal-text">
+                <span class="big-text">Pool</span>
+                <div class="top-line">
+                    <div class="div-to-left-50">
+                        <h3>HashRate</h3>
+                        <span id="pool-hash-rate"></span> KH/s
+                    </div>
+                    <div class="div-to-left-50">
+                        <h3>Miners</h4>
+                            <span id="pool-miners"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="data-server-ready">
+            <div class="group-div group-div-border normal-text">
+                <span class="big-text">Server miners</span>
+                <div class="top-line">
+                    <div class="div-to-left-50">
+                        <h3>HashRate</h3>
+                        <span id="server-hash-rate"></span> kH/s
+                    </div>
+                    <div class="div-to-left-50">
+                        <h3>Miners</h4>
+                            <span id="server-miners"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="poolstats.js"></script>
+
+</html>
